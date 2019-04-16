@@ -1,7 +1,10 @@
+//states current room
 var currentRoom = "Bedroom1";
+//list's all possible commands
 var commands = ["go", "pickup", "inventory", "talk"];
-var inventory = ["sword", "shield"];
-
+//List's inventory
+var inventory = ["", ""];
+//Allows commands to change rooms
 function changeRoom(dir) {
     if (rooms[currentRoom].directions[dir] !== undefined) {
         currentRoom = rooms[currentRoom].directions[dir]
