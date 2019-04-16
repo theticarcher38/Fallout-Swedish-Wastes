@@ -1,4 +1,4 @@
-vvar currentRoom = "Bedroom1";
+var currentRoom = "Bedroom1";
 var commands = ["go", "pickup", "inventory", "talk"];
 var inventory = ["sword", "shield"];
 
