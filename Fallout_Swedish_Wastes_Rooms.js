@@ -24,6 +24,7 @@ var rooms = {
         a door that leads <b>east</b>.",
         "directions": {
             "east": "Hallway1"
+            "north": "Closet2"
         }
     },
     
@@ -35,7 +36,7 @@ var rooms = {
     },
 
     "Hallway2": {
-        "description": "Text Goes Here",
+        "description": "The hallway widens, two large blast-doors on the sides house the power station and water treatment plant. <b>east</b> is the Power Station and <b>west</b> is the Water Treatment Plant... Also, to the <b>south</b> there lies another hallway.",
         "directions": {
             "west": "Water Treatement Plant",
             "east": "Power Station",
