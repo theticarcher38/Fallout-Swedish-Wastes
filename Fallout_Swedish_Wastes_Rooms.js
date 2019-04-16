@@ -28,7 +28,7 @@ var rooms = {
     },
     
     "Bedroom2": {
-        "description": "This bedroom is in fairly bad condition. The water has weakened the bed and it has collapsed. A skeleton lays slumped against the wall, a 9mm Pistol in his hand. There is a closet ",
+        "description": "This bedroom is in fairly bad condition. The water has weakened the bed and it has collapsed. A skeleton lays slumped against the wall, a 9mm Pistol in his hand. There is a closet to the <b>north</b> which is closed behind its metal door. ",
         "directions": {
         "west": "Hallway1"
         }
