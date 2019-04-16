@@ -1,3 +1,7 @@
+/*if you have more than one direction don't forget to put a comma after the text of the one before it. ie. 
+"south": "Hallway2,
+"north": "Hallway1"
+*/
 var rooms = {
     "Supply Closet": {
         "description": "The supply closet is small, and after you overlook it there really is nothing of use here. A couple spare-parts and other misc. things. You can leave the supply closet by going <b>south</b>.",
@@ -23,7 +27,7 @@ var rooms = {
         is a small metal box with a baseball bat laying next to it. The only exit that can be seen is\
         a door that leads <b>east</b>.",
         "directions": {
-            "east": "Hallway1"
+            "east": "Hallway1",
             "north": "Closet2"
         }
     },
