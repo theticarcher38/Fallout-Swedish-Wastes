@@ -1,4 +1,4 @@
-var currentRoom = "start";
+vvar currentRoom = "Bedroom1";
 var commands = ["go", "pickup", "inventory", "talk"];
 var inventory = ["sword", "shield"];
 
@@ -56,7 +56,7 @@ function playerInput(input) {
 }
 
 $(document).ready(function() {
-    $('#game-text').append("<p>" + rooms.start.description + "</p>");
+    $('#game-text').append("<p>" + rooms.Bedroom1.description + "</p>");
 
     $(document).keypress(function(key) {
         if (key.which === 13 && $('#user-input').is(':focus')) {
