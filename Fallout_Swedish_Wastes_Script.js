@@ -1,10 +1,7 @@
-//states current room
 var currentRoom = "Bedroom1";
-//list's all possible commands
-var commands = ["go", "pickup", "inventory", "talk"];
-//List's inventory
-var inventory = ["", ""];
-//Allows commands to change rooms
+var commands = ["go", "pickup", "inventory", "talk", "stats"];
+var inventory = ["sword", "shield"];
+
 function changeRoom(dir) {
     if (rooms[currentRoom].directions[dir] !== undefined) {
         currentRoom = rooms[currentRoom].directions[dir]
@@ -14,6 +11,10 @@ function changeRoom(dir) {
     }
 
 
+}
+
+function displayStats() {
+    $('game-text').append("Here are your stats:" + Hero);
 }
 
 function showHelp() {
@@ -52,6 +53,9 @@ function playerInput(input) {
             break;
         case "inventory":
             showInventory();
+            break;
+        case "stats":
+            displayStats();
             break;
         default:
             $('#game-text').append("<p>Invalid command!</p>");
