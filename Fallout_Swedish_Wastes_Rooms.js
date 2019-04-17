@@ -29,7 +29,7 @@ var rooms = {
         },
         
         "Bedroom3": {
-            "description": "Text Goes Here",
+            "description": "This bedroom is still flooded, and now you notice that the light is flickering. Power could be failing across the vault along with the water plant. <b>north</b> is your closet, and <b>east</b> is the exit.",
             "directions": {
                  "east": "Hallway1",
                 "north": "Closet1"
@@ -37,7 +37,7 @@ var rooms = {
         },
     
     "Bedroom2": {
-        "description": "This bedroom is in fairly bad condition. The water has weakened the bed and it has collapsed. A skeleton lays slumped against the wall, a 9mm Pistol in his hand. There is a closet to the <b>north</b> which is closed behind its metal door. You can aslo go <b>west</b> back into the hallway. ",
+        "description": "This bedroom is in fairly bad condition. The water has weakened the bed and it has collapsed. A skeleton lays slumped against the wall, a <i>9mm Pistol</i> in his hand. There is a closet to the <b>north</b> which is closed behind its metal door. You can aslo go <b>west</b> back into the hallway. ",
         "directions": {
         "west": "Hallway1",
         "north": "Closet2"
@@ -45,7 +45,7 @@ var rooms = {
     },
     
     "Bedroom4": {
-        "description": "Text Goes Here",
+        "description": "The skeleton lays with his hands open, the pistol gone as you have taken it. The bed starts to collapse even more with the vibrations of your feet.",
         "directions": {
         "west": "Hallway1",
         "north": "Closet2"
@@ -84,7 +84,7 @@ var rooms = {
     },
     
     "Closet1": {
-        "description": "Text Goes Here",
+        "description": "The closet is baren, and nothing is left besides a few vault suits. Something red catches your eye, and a flashback to when you were a child envelops your memories. You see your <i>lucky hat</i>, which was given to you by your father when you were young.",
         "directions": {
             "south": "Bedroom3"
         }
