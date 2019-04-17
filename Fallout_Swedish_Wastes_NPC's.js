@@ -5,7 +5,7 @@ function Character(health, maxHealth) {
 }
 
 // A hero is a Character + a few properties
-function Hero (name, health, max_health) {
+function Hero (health, max_health) {
     //
     Character.apply(this, arguments);
     //
