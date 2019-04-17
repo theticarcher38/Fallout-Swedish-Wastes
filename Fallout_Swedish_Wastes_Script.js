@@ -14,7 +14,7 @@ function changeRoom(dir) {
 }
 
 function displayStats() {
-    $('game-text').append("Here are your stats:" + Hero);
+    $('#game-text').append("Here are your stats: " + statarray);
 }
 
 function showHelp() {
