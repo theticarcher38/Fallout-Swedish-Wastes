@@ -1,11 +1,12 @@
+
 //Character constructor where the player and enemies will receive their //attributes from.n
 function Character(health, maxHealth) {
     this.health = health;
-    this.max_health = maxHealth;
+    this.maxHealth = maxHealth;
 }
-
+var statarray = [health, Exhaustion, XP];
 // A hero is a Character + a few properties
-function Hero (health, max_health) {
+function Hero (health, maxHealth) {
     //
     Character.apply(this, arguments);
     //
