@@ -1,15 +1,78 @@
 <!DOCTYPE html>
+
 <head>
-  <title>Fallout Swedish Wastes</title>
+    <title>Fallout Swedish Wastes</title>
+    <style rel="text/stylesheet">
+        .output {
+            text-align: left;
+            color: #37e21d;
+            font-size: 18px;
+        }
+        
+        .output:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 1px;
+            height: 1em;
+            background: #000;
+            animation: caretPulsate 1s linear infinite;
+            -webkit-animation: caretPulsate 1s linear infinite;
+        }
+        
+        .background {
+            background-color: #1a2d17;
+        }
+        
+        .inputBox {
+            background-color: #2da31b;
+        }
+        
+        @keyframes caretPulsate {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            60% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @-webkit-keyframes caretPulsate {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            60% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
-<body>
-  <div id="game-text">
-    <p>Welcome to Fallout Swedish Wastes</p>
-   
-  </div>
-    <input id="user-input" placeholder="Input you command."></input>
-    <script type="text/javascript" src="jquery-3.4.0.min.js"></script>
-    <script type="text/javascript" src="Fallout_Swedish_Wastes_Rooms.js"></script>
-    <script type="text/javascript" src="Fallout_Swedish_Wastes_NPC's.js"></script>
-    <script type="text/javascript" src="Fallout_Swedish_Wastes_Script.js"></script>
-</body>
+<div class="background">
+
+    <body>
+        <div id="game-text" class="output">
+            <h1>Welcome to Fallout Swedish Wastes</h1>
+
+        </div>
+        <input id="user-input" class="inputBox" placeholder="Input you command."></input>
+        <link rel="text/stylesheet" href="Fallout_Swedish_Wastes_Css.css">
+        <script type="text/javascript" src="jquery-3.4.0.min.js"></script>
+        <script type="text/javascript" src="Fallout_Swedish_Wastes_TextEffects.js"></script>
+        <script type="text/javascript" src="Fallout_Swedish_Wastes_Character.js"></script>
+        <script type="text/javascript" src="Fallout_Swedish_Wastes_Rooms.js"></script>
+        <script type="text/javascript" src="Fallout_Swedish_Wastes_NPC's.js"></script>
+        <script type="text/javascript" src="Fallout_Swedish_Wastes_Script.js"></script>
+    </body>
+</div>
