@@ -1,20 +1,28 @@
 var currentRoom = "Bedroom1";
-var commands = ["go", "pickup", "inventory", "talk", "stats"];
-var inventory = ["sword", "shield"];
+var commands = ["go", "pickup", "inventory", "talk", "stats", "directions"];
+var inventory = ["Baseball Bat", "Lucky Hat"];
+var directions = ["north", "n", "south", "s", "west", "w", "east", "e"];
+var userInput = ('#user-input');
 
 function changeRoom(dir) {
     if (rooms[currentRoom].directions[dir] !== undefined) {
-        currentRoom = rooms[currentRoom].directions[dir]
+        currentRoom = rooms[currentRoom].directions[dir];
+        $('#game-text').append("<p>" + userInput + "</p>");
         $('#game-text').append("<p>" + rooms[currentRoom].description + "</p>");
-    } else {
+    }
+    else {
         $('#game-text').append("<p>You cannot go that way!</p>");
     }
 
 
 }
 
+function diplayCommand() {
+
+}
+
 function displayStats() {
-    $('#game-text').append("Here are your stats: " + statarray);
+    $('#game-text').append("Here are your stats: " + Character);
 }
 
 function showHelp() {
@@ -25,6 +33,15 @@ function showHelp() {
     }
     $('#game-text').append("</ul></p>");
 
+}
+
+function showDirections() {
+    $('#game-text').append("<p>Here are the possible directions: </p>");
+    $('#game-text').append("<p><ul>");
+    for (var i = 0; i < directions.length; i++) {
+        $('#game-text').append("<li>" + directions[i] + "</li>");
+    }
+    $('#game-text').append("</ul></p>");
 }
 
 function showInventory() {
@@ -57,9 +74,16 @@ function playerInput(input) {
         case "stats":
             displayStats();
             break;
+        case "directions":
+            showDirections();
+            break;
         default:
             $('#game-text').append("<p>Invalid command!</p>");
     }
+}
+
+function pickUp() {
+    
 }
 
 $(document).ready(function() {
@@ -71,7 +95,6 @@ $(document).ready(function() {
             $('#user-input').val("");
             playerInput(value);
         }
-    })
+    });
 
-
-})
+});
