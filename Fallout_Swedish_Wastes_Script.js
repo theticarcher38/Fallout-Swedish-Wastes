@@ -18,10 +18,13 @@ function changeRoom(dir) {
 }
 
 function pickUp(item) {
-    if(rooms[currentRoom].items(item) !== undefined) {
+    if(rooms[currentRoom].items[item] !== undefined) {
         items = rooms[currentRoom].items[item];
         $('#game-text').append(`<p> ${userInput} </p>`);
         $('#game-text').append(`<p>You picked up ${userInput.split(" ")[0]}</p>`)
+        inventory.push(userInput.split(" ")[0]);
+    } else {
+     $('#game-text').append(`<p>No such item exists in ${currentRoom}</p>`)
     }
 }
 
@@ -88,6 +91,7 @@ function playerInput(input) {
         case "pickup":
             var item = input.split(" ")[1];
             pickUp(item);
+            break;
         default:
             $('#game-text').append("<p>Invalid command!</p>");
     }

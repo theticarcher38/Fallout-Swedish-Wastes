@@ -51,7 +51,7 @@ var rooms = {
             "n": "Closet1"
         },
         "items": [
-            "baseball bat"
+            "bat"
         ]
     },
 
