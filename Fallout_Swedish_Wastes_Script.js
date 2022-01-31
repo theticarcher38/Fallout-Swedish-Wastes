@@ -17,6 +17,14 @@ function changeRoom(dir) {
 
 }
 
+function pickUp(item) {
+    if(rooms[currentRoom].items(item) !== undefined) {
+        items = rooms[currentRoom].items[item];
+        $('#game-text').append(`<p> ${userInput} </p>`);
+        $('#game-text').append(`<p>You picked up ${userInput.split(" ")[0]}</p>`)
+    }
+}
+
 function diplayCommand() {
 
 }
@@ -77,14 +85,14 @@ function playerInput(input) {
         case "directions":
             showDirections();
             break;
+        case "pickup":
+            var item = input.split(" ")[1];
+            pickUp(item);
         default:
             $('#game-text').append("<p>Invalid command!</p>");
     }
 }
 
-function pickUp() {
-    
-}
 
 $(document).ready(function() {
     $('#game-text').append("<p>" + rooms.Bedroom1.description + "</p>");

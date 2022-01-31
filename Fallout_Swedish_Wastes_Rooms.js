@@ -4,6 +4,9 @@ var rooms = {
         "directions": {
             "south": "Hallway1",
             "s": "Hallway1"
+        },
+        "items": {
+
         }
     },
 
@@ -46,7 +49,10 @@ var rooms = {
             "e": "Hallway1",
             "north": "Closet1",
             "n": "Closet1"
-        }
+        },
+        "items": [
+            "baseball bat"
+        ]
     },
 
     "Bedroom3": {
