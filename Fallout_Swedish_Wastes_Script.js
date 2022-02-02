@@ -20,11 +20,15 @@ function changeRoom(dir) {
 function pickUp(item) {
     if(rooms[currentRoom].items[item] !== undefined) {
         items = rooms[currentRoom].items[item];
+        var item = userInput.split(" ")[0]
         $('#game-text').append(`<p> ${userInput} </p>`);
-        $('#game-text').append(`<p>You picked up ${userInput.split(" ")[0]}</p>`)
+        $('#game-text').append(`<p>You picked up ${item}</p>`)
         inventory.push(userInput.split(" ")[0]);
+        console.log(`${userInput}`)
+        console.log(`${items}`)
     } else {
      $('#game-text').append(`<p>No such item exists in ${currentRoom}</p>`)
+     console.log(`${items}`)
     }
 }
 
